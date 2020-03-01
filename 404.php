@@ -1,3 +1,9 @@
+<?php /**
+ * The template for displaying 404 pages (Not Found)
+ */
+
+ get_header(); ?>
+
 <main>
   <h1>Not Found!</h1>
   <p>Those are not the bits you are looking for.</p>
@@ -7,3 +13,6 @@
     <a href="articles/">article's page</a> or return to <a href="/">homepage</a>.
   </p>
 </main>
+
+<?php get_footer();
+?>

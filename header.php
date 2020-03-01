@@ -13,9 +13,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <meta name="description" content="{{ description }}" />
+        <meta name="description" content="<?php if ( is_single() ) {
+        single_post_title('', true); 
+    } else {
+        bloginfo('name'); echo " - "; bloginfo('description');
+    } ?>" />
 
-        <title><?php the_title(); ?></title>
+    <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 
      <!--   <link
         rel="stylesheet"
