@@ -11,12 +11,8 @@
         </q>
       </p>
     </aside>
-    <nav>
-      <ul>
-        <li><a href="/">Homepage</a> </li>
-        <li><a href="/articles">Articles</a></li>
-        <li><a href="/about">About</a></li>
-      </ul>
+    <nav><nav id="footer-navigation" class="site-navigation footer-navigation" role="navigation">
+       <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'nav-menu', 'fallback_cb' => false ) ); ?>
       <ul class="social">
         <li>
           <a href="mailto:spetex@icloud.com" aria-label="Send me an email."

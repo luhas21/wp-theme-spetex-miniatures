@@ -63,12 +63,8 @@
                     <h1>spetex miniatures</a></h1>
                 </div>
                 </aside>
-                <nav>
-                <ul>
-                    <li><a href="/">Homepage</a> </li>
-                    <li><a href="/articles">Articles</a></li>
-                    <li><a href="/about">About</a></li>
-                </ul>
+                <nav id="header-navigation" class="site-navigation header-navigation" role="navigation">
+                    <?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_class' => 'nav-menu', 'fallback_cb' => false ) ); ?>
                 </nav>
             </section>
         </header>

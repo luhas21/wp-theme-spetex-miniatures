@@ -12,6 +12,10 @@ add_action('wp_enqueue_scripts', 'moje_soubory');
 function university_features() {
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
+    register_nav_menus( array( 
+      'header' => 'Header menu', 
+      'footer' => 'Footer menu' 
+    ) );
 }
 
 add_action('after_setup_theme', 'university_features');
