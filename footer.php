@@ -11,7 +11,7 @@
         </q>
       </p>
     </aside>
-    <nav><nav id="footer-navigation" class="site-navigation footer-navigation" role="navigation">
+    <nav id="footer-navigation" class="site-navigation footer-navigation" role="navigation">
        <?php wp_nav_menu( array(
           'theme_location' => 'footerMenuLocation'
           )); ?>
