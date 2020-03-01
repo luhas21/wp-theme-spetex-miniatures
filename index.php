@@ -1,35 +1,24 @@
 <?php get_header(); ?>
-
-  <main>
+<main>
   <h2>Articles</h2>
-  <div class="grid">
-    <?php $i = 1;
-    while(have_posts() && $i++ <=7) {
-    the_post(); ?>
-    <div class="grid-item">
-      <a href="<?php the_permalink(); ?>">
-        <?php
-        if(has_post_thumbnail()){ ?>
-          <img class="grid-image" src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>">
-          <?php }
-        else { ?>                
-          <div class="article-image-placeholder">
-            <p><?php the_title(); ?></p>
-          </div>
-        <?php } ?>
-        <h4><?php the_title(); ?></h4>
-        <p><small>on <strong><?php echo get_the_date('M j, Y'); ?></strong></small></p>
-      </a>
-      <p class="intro"><?php echo wp_trim_words(get_the_content(),30); ?></p>
-    </div>
-  <?php } ?>
-  </div>
-  <p class="show-more"><a href="/articles">Show more content...</a></p>
+  <ul class="articles">
+    <?php if (have_posts()) {
+      while(have_posts()) {
+      the_post(); ?>
+      <div>
+      <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+      </div>
+      <div>
+        <p><small>Published by <?php the_author_posts_link(); ?> on <?php the_time('M j, Y') ?> in <?php echo get_the_category_list(', ') ?></small></p>
+      </div>
+      <div>
+        <?php the_excerpt(); ?>
+        <p class="show-more"><a href="<?php the_permalink(); ?>">Continue reading &raquo;</a></p>
+      </div>
+      <?php } } else { ?>
+        <p><?php echo "Sorry, no posts matched your criteria."; ?></p>
+    <?php } ?>
+  </ul>
 </main>
 
-
-
-
-<?php get_footer();
-
-?>
+<?php get_footer(); ?>
