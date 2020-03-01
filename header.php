@@ -1,32 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <?php wp_head(); ?>
+
+        <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-156056532-2"
+        ></script>
+        <script src="/js/modules/ga.js"></script>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="description" content="{{ description }}" />
+
+        <title><?php the_title(); ?></title>
+
+     <!--   <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://static.spetex.cz/css/reset.css"
+        />
+        <link
+        href="https://static.spetex.cz/3rdParty/fontawesome-free-5.11.2-web/css/fontawesome.css"
+        rel="stylesheet"
+        crossorigin="anonymous"
+        />
+        <link
+        href="https://static.spetex.cz/3rdParty/fontawesome-free-5.11.2-web/css/solid.css"
+        rel="stylesheet"
+        crossorigin="anonymous"
+        />
+        <link
+        href="https://static.spetex.cz/3rdParty/fontawesome-free-5.11.2-web/css/brands.css"
+        rel="stylesheet"
+        crossorigin="anonymous"
+        />
+-->
+        <link
+        href="https://fonts.googleapis.com/css?family=Rubik:400,400i,700,700i&display=swap"
+        crossorigin="anonymous"
+        rel="stylesheet"
+        />
+        <link
+        href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap"
+        crossorigin="anonymous"
+        rel="stylesheet"
+        />
+
     </head>
     <body>
-<!--        <header class="site-header">
-            <div class="container">
-            <h1 class="school-logo-text float-left"><a href="<?php echo site_url('') ?>"><strong>Fictional</strong> University</a></h1>
-            <span class="js-search-trigger site-header__search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
-            <i class="site-header__menu-trigger fa fa-bars" aria-hidden="true"></i>
-            <div class="site-header__menu group">
-                <nav class="main-navigation">
+        <header>
+            <section>
+                <aside>
+                <div>
+                    <a href="/"><img class="spetex" alt="spetex" src="<?php echo get_theme_file_uri('/images/spetex.jpg') ?>">
+                    <h1>spetex miniatures</a></h1>
+                </div>
+                </aside>
+                <nav>
                 <ul>
-                    <li><a href="<?php /*echo site_url('/about-us')*/ ?>">About Us</a></li>
-                    <li><a href="#">Programs</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Campuses</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="/">Homepage</a> </li>
+                    <li><a href="/articles">Articles</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
                 </nav>
-                <div class="site-header__util">
-                <a href="#" class="btn btn--small btn--orange float-left push-right">Login</a>
-                <a href="#" class="btn btn--small  btn--dark-orange float-left">Sign Up</a>
-                <span class="search-trigger js-search-trigger"><i class="fa fa-search" aria-hidden="true"></i></span>
-                </div>
-            </div>  
-            </div>
+            </section>
         </header>
--->
-
-<h1>Tady je header.php!</h1>

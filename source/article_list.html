@@ -1,0 +1,34 @@
+<main>
+  <h2>Articles</h2>
+  <ul class="articles">
+    {% for article in articles %}
+    <li>
+      <aside>
+        <h2>
+          <a href="articles/{{ article.slug }}">{{ article.title }}</a>
+        </h2>
+        <div class="meta">
+          {% if article.author %}<small
+            >by <strong>{{ article.author }}</strong></small
+          >{% endif %}
+          <small
+            >on
+            <strong>{{ article.published | date: "%b %d, %Y" }}</strong></small
+          >
+        </div>
+        {% if article.tags %}
+        <ul class="tags">
+          {% for tag in article.tags %}
+          <li class="{{ tag }}">
+            <small>{{ tag }}</small>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <p>{{ article.intro }}</p>
+        <p><a href="articles/{{ article.slug }}">Read more...</a></p>
+      </aside>
+    </li>
+    {% endfor %}
+  </ul>
+</main>
