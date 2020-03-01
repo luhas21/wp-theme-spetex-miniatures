@@ -59,7 +59,7 @@ html {
     line-height: 1.15;
     margin-top: 2.75rem;
     padding-left: 1.5rem;
-    max-width: 800px;
+    max-width: 650px;
   }
   thead {
     font-family: "Bree Serif", serif;
@@ -239,6 +239,7 @@ html {
     max-width: 855px;
     margin-top: 1.5rem;
     margin-bottom: -1.5rem;
+    height: auto;
   }
   .tags {
     margin-top: 1.5rem;
@@ -570,5 +571,4 @@ footer {
         align-items: stretch;
       }
   }
-  
   

@@ -3,7 +3,8 @@
   <main>
   <h2>Articles</h2>
   <div class="grid">
-    <?php while(have_posts()) {
+    <?php $i = 1;
+    while(have_posts() && $i++ <=7) {
     the_post(); ?>
     <div class="grid-item">
       <a href="<?php the_permalink(); ?>">
@@ -32,4 +33,3 @@
 <?php get_footer();
 
 ?>
-
