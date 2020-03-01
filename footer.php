@@ -3,16 +3,18 @@
     <aside>
       <div>
         <a href="/"><img class="spetex" alt="spetex" src="<?php echo get_theme_file_uri('/images/spetex.jpg') ?>">
-        <h1>spetex miniatures</a></h1>
+        <h1><?php bloginfo('name'); ?></a></h1>
       </div>
       <p>
         <q>
-          Blogging about my miniature painting journey.
+          <?php bloginfo('description'); ?>
         </q>
       </p>
     </aside>
     <nav><nav id="footer-navigation" class="site-navigation footer-navigation" role="navigation">
-       <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'nav-menu', 'fallback_cb' => false ) ); ?>
+       <?php wp_nav_menu( array(
+          'theme_location' => 'footerMenuLocation'
+          )); ?>
       <ul class="social">
         <li>
           <a href="mailto:spetex@icloud.com" aria-label="Send me an email."

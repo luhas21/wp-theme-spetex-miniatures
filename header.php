@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
     <head>
         <?php wp_head(); ?>
 
@@ -9,7 +9,7 @@
         ></script>
         <script src="/js/modules/ga.js"></script>
 
-        <meta charset="UTF-8" />
+        <meta charset="<?php bloginfo('charset'); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -54,17 +54,19 @@
         />
 
     </head>
-    <body>
+    <body <?php body_class(); ?>>
         <header>
             <section>
                 <aside>
                 <div>
                     <a href="/"><img class="spetex" alt="spetex" src="<?php echo get_theme_file_uri('/images/spetex.jpg') ?>">
-                    <h1>spetex miniatures</a></h1>
+                    <h1><?php bloginfo('name'); ?></a></h1>
                 </div>
                 </aside>
                 <nav id="header-navigation" class="site-navigation header-navigation" role="navigation">
-                    <?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_class' => 'nav-menu', 'fallback_cb' => false ) ); ?>
+                    <?php wp_nav_menu( array(
+                        'theme_location' => 'headerMenuLocation'
+                        )); ?>
                 </nav>
             </section>
         </header>
