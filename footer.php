@@ -2,7 +2,7 @@
   <section>
     <aside>
       <div>
-        <a href="/"><img class="spetex" alt="spetex" src="<?php echo get_theme_file_uri('/images/spetex.jpg') ?>">
+        <a href="<?php echo get_home_url(get_current_blog_id());?>"><img class="spetex" alt="spetex" src="<?php echo get_theme_file_uri('/images/spetex.jpg') ?>">
         <h1><?php bloginfo('name'); ?></a></h1>
       </div>
       <p>
